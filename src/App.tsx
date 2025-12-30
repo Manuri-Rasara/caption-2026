@@ -58,7 +58,7 @@ function App() {
         
         {/* Header */}
         <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-gray-100 p-4 sm:pt-6">
-          <h1 className="text-2xl font-bold text-center bg-blue-700 bg-clip-text text-transparent animate-fade-in">
+          <h1 className="text-2xl font-bold text-center bg-primary bg-clip-text text-transparent animate-fade-in">
            CAP IT UP
           </h1>
         </header>
