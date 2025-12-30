@@ -61,7 +61,7 @@ const EMOJIS = {
     mood: string,
     vibe: string,
     wish: string | null,
-    mediaType: string
+  
   ): Promise<string[]> => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1500));

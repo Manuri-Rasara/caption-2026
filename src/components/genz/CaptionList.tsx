@@ -7,10 +7,10 @@ interface CaptionListProps {
   captions: string[];
   loading: boolean;
   onRegenerate: () => void;
-  onNewUpload: () => void;
+
 }
 
-export const CaptionList: React.FC<CaptionListProps> = ({ captions, loading, onRegenerate, onNewUpload }) => {
+export const CaptionList: React.FC<CaptionListProps> = ({ captions, loading, onRegenerate }) => {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     toast.success("Caption copied! ✨", {
@@ -34,12 +34,7 @@ export const CaptionList: React.FC<CaptionListProps> = ({ captions, loading, onR
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-bold text-gray-800">Your Captions ✨</h3>
         <div className="flex gap-2">
-           <button 
-             onClick={onNewUpload}
-             className="text-xs font-semibold text-muted-foreground hover:text-primary transition-colors px-3 py-1 rounded-full hover:bg-gray-100"
-           >
-             New Upload
-           </button>
+          
         </div>
       </div>
 

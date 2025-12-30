@@ -36,4 +36,6 @@
   .read-the-docs {
     color: #888;
   }
-  
+html{
+  height: 100%;
+}

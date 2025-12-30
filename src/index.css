@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 @layer base {
+
+  
   :root {
     /* 
      * Gen-Z Caption Crafter Palette
@@ -130,3 +132,5 @@
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+
