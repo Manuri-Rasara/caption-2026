@@ -14,7 +14,7 @@ export const CaptionList: React.FC<CaptionListProps> = ({ captions, loading, onR
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     toast.success("Caption copied! ✨", {
-      description: "Ready to post, bestie!",
+      description: "Ready to post!",
     });
   };
 
