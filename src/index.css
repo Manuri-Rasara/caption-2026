@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 
+     * Gen-Z Caption Crafter Palette
+     * Vibe: Minimalist, Playful, Soft, Modern
+     */
+    
+    /* Background: Very soft cool gray */
+    --background: 210 20% 98%; 
+    --foreground: 222 47% 11%;
+
+    /* Card: Pure white with soft shadows */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary: Electric Violet / Soft Purple */
+    --primary: 255 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft Pastel Pink */
+    --secondary: 320 80% 90%;
+    --secondary-foreground: 320 60% 40%;
+
+    /* Muted: Light Gray for inactive states */
+    --muted: 210 20% 90%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Mint Green for vibes */
+    --accent: 150 70% 90%;
+    --accent-foreground: 160 50% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 255 85% 65%;
+
+    --radius: 1.5rem; /* Large rounded corners */
+
+    /* Fonts */
+    --font-sans: 'DM Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+  }
+
+  .dark {
+    /* Dark Mode: Deep Violet/Black */
+    --background: 260 30% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 260 25% 15%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 260 25% 15%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 255 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 20% 20%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 260 20% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 260 30% 25%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 20% 20%;
+    --input: 260 20% 20%;
+    --ring: 255 85% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-bounce-in {
+    animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out forwards;
+  }
+
+  .hover-scale {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  70% { transform: scale(0.9); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
